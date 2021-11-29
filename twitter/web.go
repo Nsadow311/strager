@@ -205,11 +205,11 @@ func (p *Plugin) HandleEdit(w http.ResponseWriter, r *http.Request) (templateDat
 	if err == nil {
 		go cplogs.RetryAddEntry(web.NewLogEntryFromContext(r.Context(), panelLogKeyUpdatedFeed, &cplogs.Param{Type: cplogs.ParamTypeString, Value: sub.TwitterUsername}))
 	}
-	return
+	return templateData
 
-	templateData.AddAlerts(web.SucessAlert("Successfully updated twitter feeds"))
+	templateData.AddAlerts(web.SucessAlert("test"))
 }
-	
+ 
 func (p *Plugin) HandleRemove(w http.ResponseWriter, r *http.Request) (templateData web.TemplateData, err error) {
 	ctx := r.Context()
 	_, templateData = web.GetBaseCPContextData(ctx)
