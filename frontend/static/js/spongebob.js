@@ -690,11 +690,6 @@ function updateUnsavedChangesPopup() {
 			if (!isSavingUnsavedForms)
 				$("#unsaved-changes-save-button").attr("hidden", false);
 
-		} if (unsavedChangesStack.length == 2) {
-			$("#unsaved-changes-message").text("You have unsaved changes, would you like to save them?");
-			if (!isSavingUnsavedForms)
-				$("#unsaved-changes-save-button").attr("hidden", false);
-
 		}  else {
 			$("#unsaved-changes-message").text("You have unsaved changes on multiple forms, save them all?");
 			if (!isSavingUnsavedForms)
