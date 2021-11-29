@@ -21,7 +21,7 @@ jobs:
     - name: Build
       run: |
         cd cmd/stranger
-        sudo sh bulid.sh
+        sh ./bulid.sh
 
     - name: Test
       run: echo test
