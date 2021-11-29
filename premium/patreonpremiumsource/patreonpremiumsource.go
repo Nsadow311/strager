@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/patreon"
-	"github.com/botlabs-gg/yagpdb/premium"
-	"github.com/botlabs-gg/yagpdb/premium/models"
-	"github.com/botlabs-gg/yagpdb/web"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/patreon"
+	"github.com/Nsadow311/stranger/premium"
+	"github.com/Nsadow311/stranger/premium/models"
+	"github.com/Nsadow311/stranger/web"
 	"github.com/volatiletech/sqlboiler/v4/queries/qm"
 )
 

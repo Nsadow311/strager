@@ -1,7 +1,7 @@
 package serverstats
 
 import (
-	"github.com/botlabs-gg/yagpdb/common/testutils"
+	"github.com/Nsadow311/stranger/common/testutils"
 	"testing"
 	"time"
 )

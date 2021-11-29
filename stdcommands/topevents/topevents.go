@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/botlabs-gg/yagpdb/bot"
-	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
-	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/Nsadow311/stranger/bot"
+	"github.com/Nsadow311/stranger/bot/eventsystem"
+	"github.com/Nsadow311/stranger/commands"
 	"github.com/jonas747/dcmd/v4"
 )
 

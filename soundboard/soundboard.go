@@ -4,9 +4,9 @@ package soundboard
 
 import (
 	"fmt"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/premium"
-	"github.com/botlabs-gg/yagpdb/soundboard/models"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/premium"
+	"github.com/Nsadow311/stranger/soundboard/models"
 	"github.com/volatiletech/sqlboiler/queries/qm"
 	"golang.org/x/net/context"
 	"os"

@@ -5,9 +5,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
-	"github.com/botlabs-gg/yagpdb/bot/models"
-	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/Nsadow311/stranger/bot/eventsystem"
+	"github.com/Nsadow311/stranger/bot/models"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/volatiletech/sqlboiler/boil"
 )

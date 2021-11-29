@@ -3,8 +3,8 @@ package guildunavailable
 import (
 	"fmt"
 
-	"github.com/botlabs-gg/yagpdb/bot/botrest"
-	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/Nsadow311/stranger/bot/botrest"
+	"github.com/Nsadow311/stranger/commands"
 	"github.com/jonas747/dcmd/v4"
 )
 

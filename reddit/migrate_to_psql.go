@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/reddit/models"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/reddit/models"
 	"github.com/mediocregopher/radix/v3"
 	"github.com/volatiletech/sqlboiler/boil"
 )

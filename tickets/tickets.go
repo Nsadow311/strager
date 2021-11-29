@@ -5,8 +5,8 @@ package tickets
 import (
 	"fmt"
 
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/tickets/models"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/tickets/models"
 	"github.com/jonas747/discordgo/v2"
 )
 

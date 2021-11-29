@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/botlabs-gg/yagpdb/commands"
-	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/Nsadow311/stranger/commands"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/jonas747/dcmd/v4"
 )
 

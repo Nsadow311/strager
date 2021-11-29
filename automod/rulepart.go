@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/botlabs-gg/yagpdb/automod/models"
+	"github.com/Nsadow311/stranger/automod/models"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 )

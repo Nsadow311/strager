@@ -4,7 +4,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 )

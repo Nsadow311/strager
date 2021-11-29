@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/Nsadow311/stranger/commands"
 )
 
 func getGameData(searchTitle string) (string, error) {

@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/bot/botrest"
-	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/Nsadow311/stranger/bot/botrest"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 	"github.com/karlseguin/ccache"

@@ -35,8 +35,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/templates"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/templates"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 	"github.com/lib/pq"

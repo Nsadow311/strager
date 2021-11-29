@@ -2,8 +2,8 @@ package poll
 
 import (
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/commands"
-	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/Nsadow311/stranger/commands"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/jonas747/dcmd/v4"
 	"github.com/jonas747/discordgo/v2"
 )

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/botlabs-gg/yagpdb/bot/models"
-	"github.com/botlabs-gg/yagpdb/commands"
-	"github.com/botlabs-gg/yagpdb/stdcommands/util"
+	"github.com/Nsadow311/stranger/bot/models"
+	"github.com/Nsadow311/stranger/commands"
+	"github.com/Nsadow311/stranger/stdcommands/util"
 	"github.com/jonas747/dcmd/v4"
 	"github.com/jonas747/dstate/v4"
 	"github.com/volatiletech/sqlboiler/queries/qm"

@@ -6,9 +6,9 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/cplogs"
-	"github.com/botlabs-gg/yagpdb/web"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/cplogs"
+	"github.com/Nsadow311/stranger/web"
 	"github.com/jonas747/discordgo/v2"
 	"goji.io"
 	"goji.io/pat"

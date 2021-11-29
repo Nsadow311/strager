@@ -3,7 +3,7 @@ package logs
 import (
 	"context"
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/common/templates"
+	"github.com/Nsadow311/stranger/common/templates"
 	"time"
 )
 
