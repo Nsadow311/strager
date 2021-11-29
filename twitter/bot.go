@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/mrbentarikau/pagst/common/mqueue"
-	"github.com/mrbentarikau/pagst/twitter/models"
+	"github.com/Nsadow311/stranger/common/mqueue"
+	"github.com/Nsadow311/stranger/twitter/models"
 )
 
 func (p *Plugin) Status() (string, string) {
