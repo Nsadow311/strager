@@ -697,7 +697,7 @@ function updateUnsavedChangesPopup() {
 
 		}
 
-		$("#unsaved-changes-popup").attr("hidden", false)
+		$("#unsaved-changes-popup").attr("hidden", true)
 	}
 }
 

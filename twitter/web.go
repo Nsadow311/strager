@@ -207,7 +207,7 @@ func (p *Plugin) HandleEdit(w http.ResponseWriter, r *http.Request) (templateDat
 	}
 	return
 }
-
+	
 func (p *Plugin) HandleRemove(w http.ResponseWriter, r *http.Request) (templateData web.TemplateData, err error) {
 	ctx := r.Context()
 	_, templateData = web.GetBaseCPContextData(ctx)
