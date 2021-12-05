@@ -22,3 +22,6 @@ jobs:
       run: |
         cd ./cmd/stranger
         sh build.sh
+        
+    - name: Restart
+      run: pm2 restart bot web
