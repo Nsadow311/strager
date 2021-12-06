@@ -68,8 +68,8 @@ func createInteractiveHelp(userID int64, helpEmbeds []*discordgo.MessageEmbed) (
 
 	// prepend a introductionairy first page
 	firstPage := &discordgo.MessageEmbed{
-		Title: "YAGPDB Help!",
-		Description: `YAGPDB is a multipurpose discord bot that is configured through the web interface at https://yagpdb.xyz.
+		Title: "Stranger Help!",
+		Description: `Stranger is a fully functional multi-purpose discord bot that is configured through the web interface at https://dastranger.xyz.
 For more in depth help and information you should visit https://docs.yagpdb.xyz/ as this command only shows information about commands.
 		
 		
