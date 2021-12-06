@@ -17,9 +17,9 @@ import (
 var Command = &commands.YAGCommand{
 	Cooldown:    5,
 	CmdCategory: commands.CategoryDebug,
-	Name:        "Yagstatus",
+	Name:        "strstatus",
 	Aliases:     []string{"status"},
-	Description: "Shows yagpdb status, version, uptime, memory stats, and so on",
+	Description: "Shows Stranger status, version, uptime, memory stats, and so on",
 	RunInDM:     true,
 	RunFunc:     cmdFuncYagStatus,
 }
@@ -63,7 +63,7 @@ func cmdFuncYagStatus(data *dcmd.Data) (interface{}, error) {
 			Name:    botUser.Username,
 			IconURL: discordgo.EndpointUserAvatar(botUser.ID, botUser.Avatar),
 		},
-		Title: "YAGPDB Status, version " + common.VERSION,
+		Title: "Stranger Status, version " + common.VERSION,
 		Fields: []*discordgo.MessageEmbedField{
 			&discordgo.MessageEmbedField{Name: "Servers", Value: fmt.Sprint(servers), Inline: true},
 			&discordgo.MessageEmbedField{Name: "Go Version", Value: runtime.Version(), Inline: true},

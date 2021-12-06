@@ -22,7 +22,7 @@
             </header>
             <div class="card-body">
                 <form class="" method="post" action="/manage/{{.ActiveGuild.ID}}/twitter">
-                    <p><b>Note:</b> Added feeds may take up to 10 minutes before they start being used<br/>
+                    <p><b>Note:</b> Added feeds may take up to 10 minutes before they start being used</p>
                     <p>Twitter feeds are premium only atm, this is because of twitter API limitations for non-enterprise
                         users</p>
                     <div class="form-group">
@@ -38,13 +38,7 @@
                             {{textChannelOptions .ActiveGuild.Channels nil false ""}}
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="channel">Mention role</label>
-                        <select name="MentionRole" class="form-control">
-                            {{roleOptions .ActiveGuild.Roles nil .MentionRole "None selected"}}
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block">Add</button>
+                    <button type="submit" class="btn btn-success">Add</button>
                 </form>
             </div>
         </section>
@@ -74,16 +68,6 @@
                             <label for="channel-feed-{{.ID}}">Server Channel</label>
                             <select id="channel-feed-{{.ID}}" class="form-control" name="DiscordChannel">
                                 {{textChannelOptions $Dot.ActiveGuild.Channels .ChannelID false ""}}
-                            </select>
-                        </div>
-                        <div class="form-group col">
-                            <label for="mentionrole-feed-{{.ID}}">Mention role</label>
-                            <select id="mentionrole-feed-{{.ID}}" name="MentionRole" class="form-control">
-                                {{if .MentionRole}}
-                                    {{roleOptions $Dot.ActiveGuild.Roles nil (index .MentionRole 0) "None selected"}}
-                                {{else}}
-                                    {{roleOptions $Dot.ActiveGuild.Roles nil nil "None selected"}}
-                                {{end}}
                             </select>
                         </div>
                         <div class="form-group col">
