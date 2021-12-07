@@ -63,14 +63,14 @@ func cmdFuncHelp(data *dcmd.Data) (interface{}, error) {
 func createInteractiveHelp(userID int64, helpEmbeds []*discordgo.MessageEmbed) (interface{}, error) {
 	channel, err := common.BotSession.UserChannelCreate(userID)
 	if err != nil {
-		return "Something went wrong, maybe you have DMs disabled? I don't want to spam this channel so here's a external link to available commands: <https://docs.yagpdb.xyz/commands>", err
+		return "Something went wrong, maybe you have DMs disabled? I don't want to spam this channel so here's a external link to available commands: <https://docs.dastranger.xyz/commands>", err
 	}
 
 	// prepend a introductionairy first page
 	firstPage := &discordgo.MessageEmbed{
 		Title: "Stranger Help!",
 		Description: `Stranger is a fully functional multi-purpose discord bot that is configured through the web interface at https://dastranger.xyz.
-For more in depth help and information you should visit https://docs.yagpdb.xyz/ as this command only shows information about commands.
+For more in depth help and information you should visit https://docs.dastranger.xyz/ as this command only shows information about commands.
 		
 		
 **Use the emojis under to change pages**`,
