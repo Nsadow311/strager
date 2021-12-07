@@ -2,6 +2,8 @@ package twitter
 
 import (
 	"context"
+	"fmt"
+	"html"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -187,10 +189,16 @@ OUTER:
 		return
 	}
 
-	webhookUsername := t.User.ScreenName + " • YAGPDB"
+	webhookUsername := t.User.ScreenName + " • PAGSTDB"
 	embed := createTweetEmbed(t)
 	for _, v := range relevantFeeds {
 		go analytics.RecordActiveUnit(v.GuildID, p, "posted_twitter_message")
+		var content string
+		parseMentions := []discordgo.AllowedMentionType{}
+		if len(v.MentionRole) > 0 {
+			parseMentions = []discordgo.AllowedMentionType{discordgo.AllowedMentionTypeRoles}
+			content = fmt.Sprintf("Hey <@&%d>, a new tweet!", v.MentionRole[0])
+		}
 
 		mqueue.QueueMessage(&mqueue.QueuedElement{
 			Source:       "twitter",
@@ -199,9 +207,13 @@ OUTER:
 			GuildID:   v.GuildID,
 			ChannelID: v.ChannelID,
 
+			MessageStr:      content,
 			MessageEmbed:    embed,
 			UseWebhook:      true,
 			WebhookUsername: webhookUsername,
+			AllowedMentions: discordgo.AllowedMentions{
+				Parse: parseMentions,
+			},
 
 			Priority: 5, // above youtube and reddit
 		})
@@ -218,12 +230,23 @@ func createTweetEmbed(tweet *twitter.Tweet) *discordgo.MessageEmbed {
 		timeStr = parsed.Format(time.RFC3339)
 	}
 
-	text := tweet.Text
-	if tweet.FullText != "" {
-		text = tweet.FullText
+	var text string
+	text = ""
+
+	if tweet.RetweetedStatus != nil {
+		text += fmt.Sprintf("[Retweet:](https://twitter.com/%s/status/%s) ", tweet.RetweetedStatus.User.ScreenName, tweet.RetweetedStatus.IDStr)
+	} else if tweet.InReplyToScreenName != "" || tweet.InReplyToStatusID != 0 || tweet.InReplyToUserID != 0 {
+		text += fmt.Sprintf("[Reply:](https://twitter.com/%s/status/%s) ", tweet.InReplyToScreenName, tweet.InReplyToStatusIDStr)
+	} else if tweet.QuotedStatus != nil {
+		text += fmt.Sprintf("[Quote:](https://twitter.com/%s/status/%s) ", tweet.QuotedStatus.User.ScreenName, tweet.QuotedStatusIDStr)
 	}
-	if tweet.ExtendedTweet != nil && tweet.ExtendedTweet.FullText != "" {
-		text = tweet.ExtendedTweet.FullText
+
+	if tweet.FullText != "" {
+		text += tweet.FullText
+	} else if tweet.ExtendedTweet != nil && tweet.ExtendedTweet.FullText != "" {
+		text += tweet.ExtendedTweet.FullText
+	} else {
+		text += tweet.Text
 	}
 
 	embed := &discordgo.MessageEmbed{
@@ -232,7 +255,7 @@ func createTweetEmbed(tweet *twitter.Tweet) *discordgo.MessageEmbed {
 			IconURL: tweet.User.ProfileImageURLHttps,
 			URL:     "https://twitter.com/" + tweet.User.ScreenName + "/status/" + tweet.IDStr,
 		},
-		Description: text,
+		Description: html.UnescapeString(text),
 		Timestamp:   timeStr,
 		Color:       0x38A1F3,
 	}
