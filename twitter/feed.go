@@ -189,7 +189,7 @@ OUTER:
 		return
 	}
 
-	webhookUsername := t.User.ScreenName + " • PAGSTDB"
+	webhookUsername := t.User.ScreenName + " • Stranger"
 	embed := createTweetEmbed(t)
 	for _, v := range relevantFeeds {
 		go analytics.RecordActiveUnit(v.GuildID, p, "posted_twitter_message")
