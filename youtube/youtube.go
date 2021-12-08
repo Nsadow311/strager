@@ -67,6 +67,7 @@ type ChannelSubscription struct {
 	YoutubeChannelID   string
 	YoutubeChannelName string
 	MentionEveryone    bool
+	MentionRole        string
 }
 
 func (c *ChannelSubscription) TableName() string {
@@ -184,7 +185,7 @@ type LinkEntry struct {
 
 const (
 	GuildMaxFeeds        = 50
-	GuildMaxFeedsPremium = 250
+	GuildMaxFeedsPremium = 100
 )
 
 func MaxFeedsForContext(ctx context.Context) int {
