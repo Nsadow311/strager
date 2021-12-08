@@ -152,18 +152,37 @@ func (p *Plugin) removeAllSubsForChannel(channel string) {
 	go p.MaybeRemoveChannelWatch(channel)
 }
 
-func (p *Plugin) sendNewVidMessage(guild, discordChannel string, channelTitle string, videoID string, mentionEveryone bool) {
-	content := fmt.Sprintf("**%s** uploaded a new youtube video!\n%s", channelTitle, "https://www.youtube.com/watch?v="+videoID)
-	if mentionEveryone {
-		content += " @everyone"
-	}
+func (p *Plugin) sendNewVidMessage(guild, discordChannel string, channelTitle string, videoID string, mentionEveryone bool, mentionRole string, liveBroadcastContent string) {
+	var content string
 
 	parsedChannel, _ := strconv.ParseInt(discordChannel, 10, 64)
 	parsedGuild, _ := strconv.ParseInt(guild, 10, 64)
+	parseMentionRole, _ := strconv.ParseInt(mentionRole, 10, 64)
+
+	videoYT := "https://www.youtube.com/watch?v=" + videoID
+
+	if mentionEveryone {
+		if liveBroadcastContent != "none" {
+			content += fmt.Sprintf("Hey @everyone, incoming %s YouTube video by **%s**!\n%s\n", liveBroadcastContent, channelTitle, videoYT)
+		} else {
+			content += fmt.Sprintf("Hey @everyone, incoming YouTube video by **%s**!\n%s\n", channelTitle, videoYT)
+			//content += "Hey @everyone, incoming YouTube video!\n\n"
+		}
+	} else if parseMentionRole > 0 {
+		if liveBroadcastContent != "none" {
+			content += fmt.Sprintf("Hey <@&%s>, incoming %s YouTube video by **%s**!\n%s\n", mentionRole, liveBroadcastContent, channelTitle, videoYT)
+		} else {
+			content += fmt.Sprintf("Hey <@&%s>, incoming YouTube video by **%s!**\n%s\n", mentionRole, channelTitle, videoYT)
+		}
+	} else {
+		content += fmt.Sprintf("**%s** uploaded a new YouTube video!\n%s", channelTitle, videoYT)
+	}
 
 	parseMentions := []discordgo.AllowedMentionType{}
 	if mentionEveryone {
 		parseMentions = []discordgo.AllowedMentionType{discordgo.AllowedMentionTypeEveryone}
+	} else if parseMentionRole > 0 {
+		parseMentions = []discordgo.AllowedMentionType{discordgo.AllowedMentionTypeRoles}
 	}
 
 	go analytics.RecordActiveUnit(parsedGuild, p, "posted_youtube_message")
@@ -195,11 +214,12 @@ var (
 	ErrNoChannel = errors.New("No channel with that id found")
 )
 
-func (p *Plugin) AddFeed(guildID, discordChannelID int64, youtubeChannelID, youtubeUsername string, mentionEveryone bool) (*ChannelSubscription, error) {
+func (p *Plugin) AddFeed(guildID, discordChannelID int64, youtubeChannelID, youtubeUsername string, mentionEveryone bool, mentionRole int64) (*ChannelSubscription, error) {
 	sub := &ChannelSubscription{
 		GuildID:         discordgo.StrID(guildID),
 		ChannelID:       discordgo.StrID(discordChannelID),
 		MentionEveryone: mentionEveryone,
+		MentionRole:     discordgo.StrID(mentionRole),
 	}
 
 	call := p.YTService.Channels.List([]string{"snippet"})
@@ -332,10 +352,10 @@ func (p *Plugin) CheckVideo(videoID string, channelID string) error {
 
 	item := resp.Items[0]
 
-	if item.Snippet.LiveBroadcastContent != "none" {
-		// ignore livestreams for now, might enable them at some point
-		return nil
-	}
+	//if item.Snippet.LiveBroadcastContent != "none" {
+	// ignore livestreams for now, might enable them at some point
+	//		return nil
+	//	}
 
 	parsedPublishedAt, err := time.Parse(time.RFC3339, item.Snippet.PublishedAt)
 	if err != nil {
@@ -366,7 +386,7 @@ func (p *Plugin) postVideo(subs []*ChannelSubscription, publishedAt time.Time, v
 	}
 
 	for _, sub := range subs {
-		p.sendNewVidMessage(sub.GuildID, sub.ChannelID, video.Snippet.ChannelTitle, video.Id, sub.MentionEveryone)
+		p.sendNewVidMessage(sub.GuildID, sub.ChannelID, video.Snippet.ChannelTitle, video.Id, sub.MentionEveryone, sub.MentionRole, video.Snippet.LiveBroadcastContent)
 	}
 
 	return nil
