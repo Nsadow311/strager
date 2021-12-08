@@ -15,7 +15,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Nsadow311/strangercommon"
+	"github.com/Nsadow311/stranger/common"
 	"github.com/Nsadow311/stranger/common/cplogs"
 	"github.com/Nsadow311/stranger/web"
 	"github.com/jinzhu/gorm"
