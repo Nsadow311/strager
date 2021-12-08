@@ -71,7 +71,7 @@ func (p *Plugin) StopFeed(wg *sync.WaitGroup) {
 }
 
 func UserAgent() string {
-	return fmt.Sprintf("YAGPDB:%s:%s (by /u/jonas747)", confClientID.GetString(), common.VERSION)
+	return fmt.Sprintf("PAGSTDB:%s:%s (by /u/caubert)", confClientID.GetString(), common.VERSION)
 }
 
 func setupClient() *reddit.Client {
@@ -200,24 +200,34 @@ func (p *PostHandlerImpl) handlePost(post *reddit.Link, filterGuild int64) error
 	for _, item := range filteredItems {
 		idStr := strconv.FormatInt(item.ID, 10)
 
-		webhookUsername := "r/" + post.Subreddit + " • YAGPDB"
+		webhookUsername := "r/" + post.Subreddit + " • PAGSTDB"
+
+		var content string
+		parseMentions := []discordgo.AllowedMentionType{}
+		if len(item.MentionRole) > 0 {
+			parseMentions = []discordgo.AllowedMentionType{discordgo.AllowedMentionTypeRoles}
+			content += "Hey <@&" + strconv.FormatInt(item.MentionRole[0], 10) + ">, a new Reddit post!\n"
+		}
 
 		qm := &mqueue.QueuedElement{
+
 			GuildID:         item.GuildID,
 			ChannelID:       item.ChannelID,
+			MessageStr:      content,
 			Source:          "reddit",
 			SourceItemID:    idStr,
 			UseWebhook:      true,
 			WebhookUsername: webhookUsername,
 			AllowedMentions: discordgo.AllowedMentions{
-				Parse: []discordgo.AllowedMentionType{},
+
+				Parse: parseMentions,
 			},
 		}
 
 		if item.UseEmbeds {
 			qm.MessageEmbed = embed
 		} else {
-			qm.MessageStr = message
+			qm.MessageStr += message
 		}
 
 		mqueue.QueueMessage(qm)
