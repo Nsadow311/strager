@@ -44,6 +44,7 @@ import (
 	"github.com/Nsadow311/stranger/verification"
 	"github.com/Nsadow311/stranger/youtube"
 	// External plugins
+	"github.com/Nsadow311/stranger/twitch"
 )
 
 func main() {
@@ -89,5 +90,6 @@ func main() {
 	internalapi.RegisterPlugin()
 	prom.RegisterPlugin()
 	featureflags.RegisterPlugin()
+	twitch.RegisterPlugin()
 	run.Run()
 }
