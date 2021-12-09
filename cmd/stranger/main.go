@@ -43,7 +43,6 @@ import (
 	"github.com/Nsadow311/stranger/twitter"
 	"github.com/Nsadow311/stranger/verification"
 	"github.com/Nsadow311/stranger/youtube"
-	"github.com/Nsadow311/stranger/twitch"
 	// External plugins
 )
 
@@ -90,6 +89,5 @@ func main() {
 	internalapi.RegisterPlugin()
 	prom.RegisterPlugin()
 	featureflags.RegisterPlugin()
-	twitch.RegisterPlugin()
 	run.Run()
 }
