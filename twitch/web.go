@@ -58,8 +58,8 @@ func (p *Plugin) InitWeb() {
 	})
 
 	ytMux := goji.SubMux()
-	web.CPMux.Handle(pat.New("/youtube/*"), ytMux)
-	web.CPMux.Handle(pat.New("/youtube"), ytMux)
+	web.CPMux.Handle(pat.New("/twitch/*"), ytMux)
+	web.CPMux.Handle(pat.New("/twitch"), ytMux)
 
 	// Alll handlers here require guild channels present
 	ytMux.Use(web.RequireBotMemberMW)
@@ -93,7 +93,7 @@ func (p *Plugin) HandleYoutube(w http.ResponseWriter, r *http.Request) (web.Temp
 	}
 
 	templateData["Subs"] = subs
-	templateData["VisibleURL"] = "/manage/" + discordgo.StrID(ag.ID) + "/youtube"
+	templateData["VisibleURL"] = "/manage/" + discordgo.StrID(ag.ID) + "/twitch"
 
 	return templateData, nil
 }
@@ -300,7 +300,7 @@ func (p *Plugin) LoadServerHomeWidget(w http.ResponseWriter, r *http.Request) (w
 	ag, templateData := web.GetBaseCPContextData(r.Context())
 
 	templateData["WidgetTitle"] = "Youtube feeds"
-	templateData["SettingsPath"] = "/youtube"
+	templateData["SettingsPath"] = "/twitch"
 
 	var numFeeds int64
 	result := common.GORM.Model(&ChannelSubscription{}).Where("guild_id = ?", ag.ID).Count(&numFeeds)
