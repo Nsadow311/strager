@@ -43,8 +43,9 @@ import (
 	"github.com/Nsadow311/stranger/twitter"
 	"github.com/Nsadow311/stranger/verification"
 	"github.com/Nsadow311/stranger/youtube"
-	// External plugins
 	"github.com/Nsadow311/stranger/twitch"
+	// External plugins
+	
 )
 
 func main() {
