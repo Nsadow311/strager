@@ -50,7 +50,7 @@ type Form struct {
 }
 
 func (p *Plugin) InitWeb() {
-	web.AddHTMLTemplate("youtube/assets/youtube.html", PageHTML)
+	web.AddHTMLTemplate("twtich/assets/twitch.html", PageHTML)
 	web.AddSidebarItem(web.SidebarCategoryFeeds, &web.SidebarItem{
 		Name: "Youtube",
 		URL:  "youtube",
