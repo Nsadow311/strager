@@ -1,4 +1,4 @@
-git package twitch
+package twitch
 
 import (
 	"context"
