@@ -1,4 +1,4 @@
-package twitch
+git package twitch
 
 import (
 	"context"
@@ -31,7 +31,7 @@ const (
 	CurrentConfig CtxKey = iota
 )
 
-//go:embed assets/youtube.html
+//go:embed assets/twitch.html
 var PageHTML string
 
 var (
