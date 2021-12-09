@@ -13,7 +13,7 @@
             </header>
             <div class="card-body">
                 <!-- <p>The subreddit field is just the name of the subreddit (no /r/ in front of it), examples: "games", "multicopter" -->
-                <form class="" method="post" action="/manage/{{.ActiveGuild.ID}}/youtube">
+                <form class="" method="post" action="/manage/{{.ActiveGuild.ID}}/twitch">
                     <p><b>Provide either channel ID OR username.</b> Only one of them, not both.<br>
                         When you go to the channel page, if the address bar has for example
                         <code>youtube.com/user/AngryJoeShow</code> then the username is AngryJoeShow<br>
@@ -63,7 +63,7 @@
                 {{$dot := .}}
                 {{range .Subs}}
                 <form id="sub-item-{{.ID}}" data-async-form method="post"
-                    action="/manage/{{$dot.ActiveGuild.ID}}/youtube/{{.ID}}/update"><input type="text"
+                    action="/manage/{{$dot.ActiveGuild.ID}}/twitch/{{.ID}}/update"><input type="text"
                         class="hidden form-control" name="id" value="{{.ID}}"></form>{{end}}
 
                 <table class="table table-responsive-md table-sm mb-0">
@@ -99,10 +99,10 @@
                             </td>
                             <td>
                                 <button form="sub-item-{{.ID}}" type="submit" class="btn btn-success"
-                                    formaction="/manage/{{$dot.ActiveGuild.ID}}/youtube/{{.ID}}/update"
+                                    formaction="/manage/{{$dot.ActiveGuild.ID}}/twitch/{{.ID}}/update"
                                     data-async-form-alertsonly>Save</button>
                                 <button form="sub-item-{{.ID}}" type="submit" class="btn btn-danger"
-                                    formaction="/manage/{{$dot.ActiveGuild.ID}}/youtube/{{.ID}}/delete">Delete</button>
+                                    formaction="/manage/{{$dot.ActiveGuild.ID}}/twitch/{{.ID}}/delete">Delete</button>
                             </td>
                         </tr>
                         {{end}}
