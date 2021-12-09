@@ -16,7 +16,7 @@ import (
 	"github.com/mediocregopher/radix/v3"
 	"github.com/prometheus/client_golang/prometheus"
 	"golang.org/x/oauth2/google"
-	"google.golang.org/api/twitch/v3"
+	"google.golang.org/api/youtube/v3"
 )
 
 const (
