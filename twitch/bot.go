@@ -14,5 +14,9 @@ func (p *Plugin) Status() (string, string) {
 	var numChannels int
 	common.GORM.Model(&ChannelSubscription{}).Count(&numChannels)
 
+<<<<<<< HEAD
 	return "Twitch", fmt.Sprintf("%d/%d", unique, numChannels)
+=======
+	return "Youtube", fmt.Sprintf("%d/%d", unique, numChannels)
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 }

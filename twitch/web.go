@@ -31,7 +31,11 @@ const (
 	CurrentConfig CtxKey = iota
 )
 
+<<<<<<< HEAD
 //go:embed assets/youtube.html
+=======
+//go:embed assets/twitch.html
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 var PageHTML string
 
 var (
@@ -50,7 +54,11 @@ type Form struct {
 }
 
 func (p *Plugin) InitWeb() {
+<<<<<<< HEAD
 	web.AddHTMLTemplate("twitch/assets/youtube.html", PageHTML)
+=======
+	web.AddHTMLTemplate("twitch/assets/twitch.html", PageHTML)
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 	web.AddSidebarItem(web.SidebarCategoryFeeds, &web.SidebarItem{
 		Name: "Twitch",
 		URL:  "twitch",
@@ -65,7 +73,11 @@ func (p *Plugin) InitWeb() {
 	ytMux.Use(web.RequireBotMemberMW)
 	ytMux.Use(web.RequirePermMW(discordgo.PermissionMentionEveryone))
 
+<<<<<<< HEAD
 	mainGetHandler := web.ControllerHandler(p.HandleYoutube, "cp_twitch")
+=======
+	mainGetHandler := web.ControllerHandler(p.HandleYoutube, "cp_youtube")
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 
 	ytMux.Handle(pat.Get("/"), mainGetHandler)
 	ytMux.Handle(pat.Get(""), mainGetHandler)
@@ -93,7 +105,11 @@ func (p *Plugin) HandleYoutube(w http.ResponseWriter, r *http.Request) (web.Temp
 	}
 
 	templateData["Subs"] = subs
+<<<<<<< HEAD
 	templateData["VisibleURL"] = "/manage/" + discordgo.StrID(ag.ID) + "/youtube"
+=======
+	templateData["VisibleURL"] = "/manage/" + discordgo.StrID(ag.ID) + "/twitch"
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 
 	return templateData, nil
 }
@@ -300,7 +316,11 @@ func (p *Plugin) LoadServerHomeWidget(w http.ResponseWriter, r *http.Request) (w
 	ag, templateData := web.GetBaseCPContextData(r.Context())
 
 	templateData["WidgetTitle"] = "Youtube feeds"
+<<<<<<< HEAD
 	templateData["SettingsPath"] = "/youtube"
+=======
+	templateData["SettingsPath"] = "/twitch"
+>>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 
 	var numFeeds int64
 	result := common.GORM.Model(&ChannelSubscription{}).Where("guild_id = ?", ag.ID).Count(&numFeeds)
