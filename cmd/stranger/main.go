@@ -45,11 +45,7 @@ import (
 	"github.com/Nsadow311/stranger/youtube"
 	"github.com/Nsadow311/stranger/twitch"
 	// External plugins
-<<<<<<< HEAD
-	"github.com/Nsadow311/stranger/twitch"
-=======
 	
->>>>>>> 62f4d9c1b3ebfca2c67a21fce5befcac21acf4d7
 )
 
 func main() {
