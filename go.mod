@@ -62,6 +62,7 @@ require (
 	github.com/volatiletech/sqlboiler/v4 v4.5.0
 	github.com/volatiletech/strmangle v0.0.1
 	github.com/wsxiaoys/terminal v0.0.0-20160513160801-0940f3fc43a0 // indirect
+	github.com/nicklaw5/helix/v2 v2.2.1
 	goji.io v2.0.2+incompatible
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 	golang.org/x/image v0.0.0-20190902063713-cb417be4ba39
