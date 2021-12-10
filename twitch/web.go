@@ -65,7 +65,7 @@ func (p *Plugin) InitWeb() {
 	ytMux.Use(web.RequireBotMemberMW)
 	ytMux.Use(web.RequirePermMW(discordgo.PermissionMentionEveryone))
 
-	mainGetHandler := web.ControllerHandler(p.HandleYoutube, "cp_youtube")
+	mainGetHandler := web.ControllerHandler(p.HandleYoutube, "cp_twitch")
 
 	ytMux.Handle(pat.Get("/"), mainGetHandler)
 	ytMux.Handle(pat.Get(""), mainGetHandler)
