@@ -7,12 +7,12 @@ import (
 	"time"
 	"unicode"
 
-	"github.com//Nsadow311/stranger/antiphishing"
-	"github.com//Nsadow311/stranger/automod/models"
-	"github.com//Nsadow311/stranger/automod_legacy"
-	"github.com//Nsadow311/stranger/bot"
-	"github.com//Nsadow311/stranger/common"
-	"github.com//Nsadow311/stranger/safebrowsing"
+	"github.com/Nsadow311/stranger/antiphishing"
+	"github.com/Nsadow311/stranger/automod/models"
+	"github.com/Nsadow311/stranger/automod_legacy"
+	"github.com/Nsadow311/stranger/bot"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/safebrowsing"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 )
