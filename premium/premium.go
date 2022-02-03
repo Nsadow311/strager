@@ -4,12 +4,12 @@ import (
 	"time"
 
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/config"
-	"github.com/Nsadow311/stranger/common/featureflags"
-	"github.com/Nsadow311/stranger/common/scheduledevents2"
-	schEventsModels "github.com/Nsadow311/stranger/common/scheduledevents2/models"
-	"github.com/Nsadow311/stranger/common/templates"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/config"
+	"github.com/botlabs-gg/yagpdb/common/featureflags"
+	"github.com/botlabs-gg/yagpdb/common/scheduledevents2"
+	schEventsModels "github.com/botlabs-gg/yagpdb/common/scheduledevents2/models"
+	"github.com/botlabs-gg/yagpdb/common/templates"
 	"github.com/mediocregopher/radix/v3"
 )
 

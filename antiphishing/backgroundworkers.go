@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/common/backgroundworkers"
+	"github.com/botlabs-gg/yagpdb/common/backgroundworkers"
 )
 
 var _ backgroundworkers.BackgroundWorkerPlugin = (*Plugin)(nil)

@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/featureflags"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/featureflags"
 	"github.com/jonas747/discordgo/v2"
 )
 

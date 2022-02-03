@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/backgroundworkers"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/backgroundworkers"
 	"github.com/mediocregopher/radix/v3"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"

@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/cacheset"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/cacheset"
 	"github.com/jonas747/discordgo/v2"
 )
 

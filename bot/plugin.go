@@ -5,15 +5,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/bot/models"
-	"github.com/Nsadow311/stranger/common/featureflags"
+	"github.com/botlabs-gg/yagpdb/bot/models"
+	"github.com/botlabs-gg/yagpdb/common/featureflags"
 	"github.com/mediocregopher/radix/v3"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/volatiletech/null"
 	"github.com/volatiletech/sqlboiler/queries/qm"
 
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dshardorchestrator/v3"
 	"github.com/jonas747/dstate/v4"

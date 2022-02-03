@@ -15,9 +15,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/cplogs"
-	"github.com/Nsadow311/stranger/web"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/cplogs"
+	"github.com/botlabs-gg/yagpdb/web"
 	"github.com/jinzhu/gorm"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/mediocregopher/radix/v3"

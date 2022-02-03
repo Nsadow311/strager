@@ -1,8 +1,8 @@
 package bot
 
 import (
-	"github.com/Nsadow311/stranger/bot/shardmemberfetcher"
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/bot/shardmemberfetcher"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/jonas747/dstate/v4"
 )
 

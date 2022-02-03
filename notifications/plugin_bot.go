@@ -6,11 +6,11 @@ import (
 	"strings"
 
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/analytics"
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/bot/eventsystem"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/templates"
+	"github.com/botlabs-gg/yagpdb/analytics"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/templates"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 )

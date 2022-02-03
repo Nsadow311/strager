@@ -11,10 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/backgroundworkers"
-	"github.com/Nsadow311/stranger/soundboard/models"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/backgroundworkers"
+	"github.com/botlabs-gg/yagpdb/soundboard/models"
 	"github.com/jonas747/dca/v2"
 	"goji.io/pat"
 )

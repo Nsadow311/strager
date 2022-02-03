@@ -3,10 +3,10 @@ package currentshard
 import (
 	"fmt"
 
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/bot/botrest"
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/bot/botrest"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/jonas747/dcmd/v4"
 )
 

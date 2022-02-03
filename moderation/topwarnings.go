@@ -6,8 +6,8 @@ import (
 
 	//"github.com/jonas747/discordgo/v2"
 	//"github.com/jonas747/dstate/v4"
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/common"
 )
 
 type WarnRankEntry struct {

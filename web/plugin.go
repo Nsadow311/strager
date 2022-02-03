@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/common"
 )
 
 // Plugin represents a web plugin

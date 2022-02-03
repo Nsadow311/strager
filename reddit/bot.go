@@ -6,10 +6,10 @@ import (
 	"strings"
 
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/reddit/models"
-	"github.com/Nsadow311/stranger/stdcommands/util"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/reddit/models"
+	"github.com/botlabs-gg/yagpdb/stdcommands/util"
 	"github.com/jonas747/dcmd/v4"
 )
 
@@ -69,7 +69,6 @@ func (p *Plugin) AddCommands() {
 		}),
 	})
 }
-
 
 func (p *Plugin) Status() (string, string) {
 	numFeeds, err := models.RedditFeeds(models.RedditFeedWhere.Disabled.EQ(false)).CountG(context.Background())

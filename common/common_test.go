@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Nsadow311/stranger/common/testutils"
+	"github.com/botlabs-gg/yagpdb/common/testutils"
 )
 
 func TestMain(m *testing.M) {

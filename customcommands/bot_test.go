@@ -3,8 +3,8 @@ package customcommands
 import (
 	"testing"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/customcommands/models"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/customcommands/models"
 	"github.com/jonas747/discordgo/v2"
 )
 

@@ -3,11 +3,12 @@ package serverstats
 import (
 	"database/sql"
 	"fmt"
-	"github.com/Nsadow311/stranger/common"
 	"os"
 	"testing"
 
-	"github.com/Nsadow311/stranger/common/testutils"
+	"github.com/botlabs-gg/yagpdb/common"
+
+	"github.com/botlabs-gg/yagpdb/common/testutils"
 )
 
 var db *sql.DB

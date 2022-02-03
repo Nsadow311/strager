@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Nsadow311/stranger/common/testutils"
+	"github.com/botlabs-gg/yagpdb/common/testutils"
 )
 
 func TestCompressStats(t *testing.T) {

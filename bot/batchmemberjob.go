@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/bot/eventsystem"
+	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
 	"github.com/jonas747/discordgo/v2"
 )
 

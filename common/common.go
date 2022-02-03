@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nsadow311/stranger/common/cacheset"
+	"github.com/botlabs-gg/yagpdb/common/cacheset"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/jmoiron/sqlx"

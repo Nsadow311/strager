@@ -8,11 +8,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/mqueue"
-	"github.com/Nsadow311/stranger/common/pubsub"
-	"github.com/Nsadow311/stranger/premium"
-	"github.com/Nsadow311/stranger/reddit/models"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/mqueue"
+	"github.com/botlabs-gg/yagpdb/common/pubsub"
+	"github.com/botlabs-gg/yagpdb/premium"
+	"github.com/botlabs-gg/yagpdb/reddit/models"
 	"github.com/jonas747/go-reddit"
 )
 

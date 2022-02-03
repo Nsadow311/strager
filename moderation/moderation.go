@@ -2,9 +2,9 @@ package moderation
 
 import (
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/configstore"
-	"github.com/Nsadow311/stranger/common/featureflags"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/configstore"
+	"github.com/botlabs-gg/yagpdb/common/featureflags"
 	"github.com/jonas747/discordgo/v2"
 	"golang.org/x/net/context"
 )

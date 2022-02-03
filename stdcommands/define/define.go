@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"regexp"
 
-	"github.com/Nsadow311/stranger/bot/paginatedmessages"
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/bot/paginatedmessages"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/dpatrie/urbandictionary"
 	"github.com/jonas747/dcmd/v4"
 	"github.com/jonas747/discordgo/v2"

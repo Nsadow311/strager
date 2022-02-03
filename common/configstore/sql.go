@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/jinzhu/gorm"
 	"golang.org/x/net/context"
 )

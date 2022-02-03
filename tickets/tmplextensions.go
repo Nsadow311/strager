@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/common/templates"
-	"github.com/Nsadow311/stranger/tickets/models"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/common/templates"
+	"github.com/botlabs-gg/yagpdb/tickets/models"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 	"github.com/volatiletech/null"

@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Nsadow311/stranger/bot/eventsystem"
+	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
 	"github.com/mediocregopher/radix/v3"
 
-	"github.com/Nsadow311/stranger/common"
+	"github.com/botlabs-gg/yagpdb/common"
 	"github.com/jonas747/dshardorchestrator/v3"
 	"github.com/jonas747/dshardorchestrator/v3/node"
 	"github.com/jonas747/dstate/v4"

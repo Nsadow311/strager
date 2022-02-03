@@ -1,9 +1,10 @@
 package serverstats
 
 import (
-	"github.com/Nsadow311/stranger/common/testutils"
 	"testing"
 	"time"
+
+	"github.com/botlabs-gg/yagpdb/common/testutils"
 )
 
 func TestDailyStatsMessages(t *testing.T) {

@@ -3,11 +3,11 @@ package cah
 import (
 	"fmt"
 
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/bot/eventsystem"
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/pubsub"
+	"github.com/botlabs-gg/yagpdb/bot"
+	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/pubsub"
 	"github.com/jonas747/cardsagainstdiscord/v2"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dshardorchestrator/v3"

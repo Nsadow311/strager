@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nsadow311/stranger/common"
-	"github.com/Nsadow311/stranger/common/models"
-	"github.com/Nsadow311/stranger/web/discorddata"
+	"github.com/botlabs-gg/yagpdb/common"
+	"github.com/botlabs-gg/yagpdb/common/models"
+	"github.com/botlabs-gg/yagpdb/web/discorddata"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/mediocregopher/radix/v3"
 	"golang.org/x/oauth2"

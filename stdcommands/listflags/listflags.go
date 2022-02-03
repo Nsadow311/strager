@@ -3,9 +3,9 @@ package listflags
 import (
 	"strings"
 
-	"github.com/Nsadow311/stranger/commands"
-	"github.com/Nsadow311/stranger/common/featureflags"
-	"github.com/Nsadow311/stranger/stdcommands/util"
+	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/botlabs-gg/yagpdb/common/featureflags"
+	"github.com/botlabs-gg/yagpdb/stdcommands/util"
 	"github.com/jonas747/dcmd/v4"
 )
 
