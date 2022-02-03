@@ -4,9 +4,9 @@ import (
 	"strings"
 
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/analytics"
-	"github.com/botlabs-gg/yagpdb/commands"
-	"github.com/botlabs-gg/yagpdb/soundboard/models"
+	"github.com/Nsadow311/stranger/analytics"
+	"github.com/Nsadow311/stranger/commands"
+	"github.com/Nsadow311/stranger/soundboard/models"
 	"github.com/jonas747/dcmd/v4"
 	"github.com/jonas747/dstate/v4"
 )

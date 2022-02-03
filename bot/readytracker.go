@@ -3,7 +3,7 @@ package bot
 import (
 	"sync"
 
-	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
+	"github.com/Nsadow311/stranger/bot/eventsystem"
 )
 
 // ReadyTracker tracks process shards and initial readies/resumes, aswell as sending out events

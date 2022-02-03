@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/scheduledevents2/models"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/scheduledevents2/models"
 )
 
 var SchemaInit = false

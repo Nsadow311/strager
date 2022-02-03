@@ -5,8 +5,8 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/Nsadow311/stranger/commands"
 	"github.com/alfredxing/calc/compute"
-	"github.com/botlabs-gg/yagpdb/commands"
 	"github.com/jonas747/dcmd/v4"
 )
 

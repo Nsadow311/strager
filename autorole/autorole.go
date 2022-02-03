@@ -1,8 +1,8 @@
 package autorole
 
 import (
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/config"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/config"
 	"github.com/jonas747/discordgo/v2"
 )
 

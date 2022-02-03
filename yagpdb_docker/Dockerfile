@@ -7,7 +7,7 @@ RUN go mod download
 COPY . .
 
 WORKDIR /appbuild/yagpdb/cmd/yagpdb
-RUN CGO_ENABLED=0 GOOS=linux go build -v -ldflags "-X github.com/botlabs-gg/yagpdb/common.VERSION=$(git describe --tags)"
+RUN CGO_ENABLED=0 GOOS=linux go build -v -ldflags "-X github.com/Nsadow311/stranger/common.VERSION=$(git describe --tags)"
 
 
 

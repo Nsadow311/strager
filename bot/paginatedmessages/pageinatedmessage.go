@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/botlabs-gg/yagpdb/bot"
-	"github.com/botlabs-gg/yagpdb/bot/eventsystem"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/pubsub"
+	"github.com/Nsadow311/stranger/bot"
+	"github.com/Nsadow311/stranger/bot/eventsystem"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/pubsub"
 	"github.com/jonas747/discordgo/v2"
 )
 

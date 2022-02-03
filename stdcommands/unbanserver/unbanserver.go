@@ -1,9 +1,9 @@
 package unbanserver
 
 import (
-	"github.com/botlabs-gg/yagpdb/commands"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/stdcommands/util"
+	"github.com/Nsadow311/stranger/commands"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/stdcommands/util"
 	"github.com/jonas747/dcmd/v4"
 	"github.com/mediocregopher/radix/v3"
 )

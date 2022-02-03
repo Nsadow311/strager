@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"emperror.dev/errors"
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/common/configstore"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/common/configstore"
 	"golang.org/x/net/context"
 )
 

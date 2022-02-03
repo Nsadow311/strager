@@ -5,8 +5,8 @@ package rsvp
 import (
 	"sync"
 
-	"github.com/botlabs-gg/yagpdb/common"
-	"github.com/botlabs-gg/yagpdb/timezonecompanion/trules"
+	"github.com/Nsadow311/stranger/common"
+	"github.com/Nsadow311/stranger/timezonecompanion/trules"
 	"github.com/jonas747/when"
 	"github.com/jonas747/when/rules"
 	wcommon "github.com/jonas747/when/rules/common"

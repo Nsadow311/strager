@@ -7,9 +7,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/botlabs-gg/yagpdb/common/config"
+	"github.com/Nsadow311/stranger/common/config"
 
-	"github.com/botlabs-gg/yagpdb/commands"
+	"github.com/Nsadow311/stranger/commands"
 	"github.com/jonas747/dcmd/v4"
 )
 

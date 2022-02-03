@@ -1,4 +1,4 @@
-module github.com/botlabs-gg/yagpdb
+module github.com/Nsadow311/stranger
 
 go 1.16
 
