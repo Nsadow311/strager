@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"emperror.dev/errors"
-	"github.com/Nsadow311/stranger/automod/models"
+	"github.com//Nsadow311/stranger/automod/models"
 )
 
 type ParsedRuleset struct {

@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Nsadow311/stranger/automod/models"
+	"github.com//Nsadow311/stranger/automod/models"
 	"github.com/jonas747/discordgo/v2"
 	"github.com/jonas747/dstate/v4"
 )
@@ -45,6 +45,7 @@ var RulePartMap = map[int]RulePart{
 	30: &MemberJoinTrigger{},
 	31: &MessageAttachmentTrigger{},
 	32: &MessageAttachmentTrigger{RequiresAttachment: true},
+	33: &AntiPhishingLinkTrigger{},
 
 	// Conditions 2xx
 	200: &MemberRolesCondition{Blacklist: true},

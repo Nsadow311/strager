@@ -3,8 +3,8 @@ package automod
 import (
 	"time"
 
-	"github.com/Nsadow311/stranger/bot"
-	"github.com/Nsadow311/stranger/common"
+	"github.com//Nsadow311/stranger/bot"
+	"github.com//Nsadow311/stranger/common"
 )
 
 type Condition interface {
